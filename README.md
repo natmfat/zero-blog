@@ -1,5 +1,7 @@
 # Zero Framework Blog
 
+[![Run on Repl.it](https://replit.com/badge/github/natmfat/zero-blog)](https://replit.com/new/github/natmfat/zero-blog)
+
 A zero dependency blog, created from scratch. Created for the [Replit Template Jam](https://blog.replit.com/template-jam).
 
 NOTE: if you're here from a template, go to `configInternals.json` and set `demo` to false. Then run the Repl.
