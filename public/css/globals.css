@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* CSS vars (change if you want to change look of app) */
+:root {
+    --c-body: #2e2e2e;
+    --c-head: #111111;
+    --c-gray: #97a5b1;
+
+    --c-bg: #ffffff;
+    --c-secondary-bg: #f9f6f2;
+    --c-article-bg: #fff3d8;
+
+    --c-shadow: #0000000d;
+
+    --c-primary: #ffce64;
+    --c-primary-hover: #fec448;
+
+    /* yoinked colors from my current VSCode theme, Github Dark I think??? */
+    --c-editor-bg: #0e1117;
+    --c-editor-comment: #8d949e;
+    --c-editor-string: #b1d6ff;
+    --c-editor-keyword: #ee7b74;
+    --c-editor-classes: #8cc0f1;
+    --c-editor-methods: #cea8ff;
+    --c-editor-html: #95e783;
+    --c-editor-css-var: #f1a657;
+    --c-editor-css-bracket: #f6d700;
+    --c-editor-css-paren: #ce70d8;
+
+    --font-inter: "Inter", sans-serif;
+
+    --svg-width: 1.4rem;
+    --px: 2rem;
+
+    --max-w-sm: 55rem;
+    --max-w-lg: 70rem;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+    background-color: var(--c-secondary-bg);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+/* global resets, had to include this because z-link renders a span and not an anchor */
+a {
+    cursor: pointer;
+}

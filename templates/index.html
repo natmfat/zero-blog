@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{ return import("templates/seo.html") }}
+
+        <!-- save posts & author into JS globals -->
+        <script>
+            window.APP_POSTS = JSON.parse(
+                decodeURIComponent(
+                    `{{ encodeURIComponent(JSON.stringify(posts)) }}`
+                )
+            );
+
+            window.APP_AUTHOR = JSON.parse(
+                decodeURIComponent(
+                    `{{ encodeURIComponent(JSON.stringify(author)) }}`
+                )
+            );
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <z-router>
+                <z-route path="/" title="Home">
+                    <z-header></z-header>
+                    <z-profile
+                        avatar="{{ author.avatar }}"
+                        name="{{ author.name }}"
+                        bio="{{ author.bio }}"
+                    >
+                        <z-profile-socials
+                            github="{{ author.links.github }}"
+                            twitter="{{ author.links.twitter }}"
+                            personal="{{ author.links.personal }}"
+                        ></z-profile-socials>
+                    </z-profile>
+                    <z-articles>
+                        {{ return posts.map(({ url, markdown: { metadata } }) =>
+                        `
+                        <z-article
+                            href="/${url}"
+                            title="${metadata.title}"
+                            emoji="${metadata.emoji}"
+                            date="${metadata.date}"
+                        ></z-article>
+                        `).join("\n") }}
+                    </z-articles>
+                    <z-footer></z-footer>
+                </z-route>
+                <z-route path="/posts/:id">
+                    <z-header></z-header>
+                    <z-dynamic-post></z-dynamic-post>
+                    <z-footer></z-footer>
+                </z-route>
+            </z-router>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "port": 5500,
+    "genesis": false,
+    "demo": true,
+    "author": {
+        "avatar": "https://natmfat.com/logo.png",
+        "name": "Nathan",
+        "bio": "Focused on making apps shine. Interested in learning more about Rust and computer vision. I also like creative coding and playing the flute.",
+        "links": {
+            "github": "https://github.com/natmfat",
+            "twitter": "https://twitter.com/natmfat",
+            "personal": "https://natmfat.com"
+        }
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>"
+        />
+        <title>Zero Framework Blog | Setup</title>
+
+        <link rel="stylesheet" href="/css/globals.css" />
+        <link rel="stylesheet" href="/css/genesis.css" />
+    </head>
+    <body>
+        <main>
+            <img
+                src="https://pbs.twimg.com/media/FUgroVtUcAAPUC9?format=jpg&name=4096x4096"
+                alt="Zero Framework Blog Sneak Peak"
+            />
+            <h1>Hello! Welcome to the Zero Framework Blog.</h1>
+            <p>
+                As the illustrious and innovative title suggests, this is indeed
+                technically a Zero framework blog. Everything you see, including
+                internal libraries and frameworks, is 100% built from scratch.
+                This blog allows you to write posts in Markdown and Replit users
+                to comment on your posts. Under the hood, the blog features a
+                vanilla server, file template renderer, and a custom frontend
+                web component framework.
+            </p>
+
+            <p>
+                You will be able to read more about the technical details and
+                project timeline on the Hello World post after you go through
+                this setup process.
+            </p>
+
+            <h2>Wait a minute...</h2>
+            <p>
+                This doesn't look like a blog!? You're right. This is the first
+                ever onboarding process for a Replit template, to help you get
+                up to speed. Pretty sick huh? After going through the setup
+                process, we'll turn off this page and you'll have access to the
+                blog.
+            </p>
+
+            <h2>How to use this stuff</h2>
+            <p>
+                Simple. Just add a Markdown file in the "posts" directory and
+                that's it. The filename will be the url path to access the post,
+                so make sure it looks pretty. Again, you'll find some more
+                details in the Hello World post.
+            </p>
+
+            <h2>Setting Things up</h2>
+            <p>
+                We'll need some information to help us customize your blog.
+                Don't worry - everything will be literally written to the files
+                of this Repl, this data does not travel anywhere.
+            </p>
+
+            <p>
+                NOTE: if this is the offical template release, your changes will
+                not affect the blog because I don't want you to overwrite my
+                profile. Fork this project and disable "demo" in
+                "configInternals.json"
+            </p>
+
+            <form action="/genesis" method="POST">
+                <label for="avatar">Avatar Url</label>
+                <input
+                    placeholder="https://pbs.twimg.com/profile_images/1520125126271922179/ds8zJhJV_400x400.jpg"
+                    name="avatar"
+                    id="avatar"
+                    required
+                />
+                <br />
+
+                <label for="name">Name</label>
+                <input placeholder="Nathan" name="name" id="name" required />
+                <br />
+
+                <label for="bio">Bio</label>
+                <input
+                    placeholder="eater of goldfish, destroyer of cheezits"
+                    name="bio"
+                    id="bio"
+                    required
+                />
+
+                <fieldset>
+                    <legend>Profile Links</legend>
+
+                    <label for="github">Github</label>
+                    <input
+                        placeholder="https://github.com/natmfat"
+                        name="github"
+                        id="github"
+                    />
+                    <br />
+
+                    <label for="twitter">Twitter</label>
+                    <input
+                        placeholder="https://twitter.com/natmfat"
+                        name="twitter"
+                        id="twitter"
+                    />
+                    <br />
+
+                    <label for="personal">Personal Website</label>
+                    <input
+                        placeholder="https://natmfat.com"
+                        name="personal"
+                        id="personal"
+                    />
+                    <br />
+                </fieldset>
+
+                <button>Let's do this.</button>
+            </form>
+        </main>
+
+        <footer>Created by Nathan.</footer>
+    </body>
+</html>

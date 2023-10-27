@@ -1,0 +1,41 @@
+### create new comment page
+
+POST https://localhost:5000/createPage
+Content-Type: application/json
+
+{
+    "page": "localhost:5000/post/1"
+}
+
+### delete comment page
+DELETE https://localhost:5000/deletePage
+Content-Type: application/json
+
+{
+    "page": "localhost:5000/post/1"
+}
+
+### get comments under a page
+GET https://localhost:5000/getPage?page=localhost:5000/post/1
+
+### create a comment
+PUT https://localhost:5000/createComment
+Content-Type: application/json
+
+{
+    "page": "localhost:5000/post/1",
+    "comment": "hello world"
+}
+
+### delete a comment
+DELETE https://localhost:5000/deleteComment
+Content-Type: application/application/json
+
+{
+    "page": "localhost:5000/post/1",
+    "id": 1234
+}
+
+### get credentials
+
+GET https://localhost:5000/getCredentials
